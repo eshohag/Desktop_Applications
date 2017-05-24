@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EA268AF-C479-460B-B6E5-78DABBD9835D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taslim</RootNamespace>
+    <AssemblyName>Taslim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\AccountManager.cs" />
+    <Compile Include="BAL\AdministratorManager.cs" />
+    <Compile Include="BAL\LabControllerManager.cs" />
+    <Compile Include="BAL\LibraryManager.cs" />
+    <Compile Include="BAL\loginInfoManager.cs" />
+    <Compile Include="BAL\StudentPerformanceManager.cs" />
+    <Compile Include="BAL\StuffManager.cs" />
+    <Compile Include="BAL\TeacherManager.cs" />
+    <Compile Include="DAL\Gateway\AccountGateway.cs" />
+    <Compile Include="DAL\Gateway\AdministratorGateway.cs" />
+    <Compile Include="DAL\Gateway\CommonGateway.cs" />
+    <Compile Include="DAL\Gateway\LabControllerGateway.cs" />
+    <Compile Include="DAL\Gateway\LibraryGateway.cs" />
+    <Compile Include="DAL\Gateway\LoginInfoGateway.cs" />
+    <Compile Include="DAL\Gateway\StudentPerformanceGateway.cs" />
+    <Compile Include="DAL\Gateway\StuffGateway.cs" />
+    <Compile Include="DAL\Gateway\TeacherGateway.cs" />
+    <Compile Include="DAL\Model\Account.cs" />
+    <Compile Include="DAL\Model\Administrator.cs" />
+    <Compile Include="DAL\Model\DepartmentMaxPer.cs" />
+    <Compile Include="DAL\Model\labController.cs" />
+    <Compile Include="DAL\Model\Librarian.cs" />
+    <Compile Include="DAL\Model\LoginInfo.cs" />
+    <Compile Include="DAL\Model\StudentPerformance.cs" />
+    <Compile Include="DAL\Model\Stuff.cs" />
+    <Compile Include="DAL\Model\Teacher.cs" />
+    <Compile Include="UI\moduleSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\moduleSelect.Designer.cs">
+      <DependentUpon>moduleSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\facultyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\facultyProfile.Designer.cs">
+      <DependentUpon>facultyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendance.Designer.cs">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\teacher.Designer.cs">
+      <DependentUpon>teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\administrator.Designer.cs">
+      <DependentUpon>administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\accounts.Designer.cs">
+      <DependentUpon>accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\labController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\labController.Designer.cs">
+      <DependentUpon>labController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\librarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\librarian.Designer.cs">
+      <DependentUpon>librarian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\stuff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\stuff.Designer.cs">
+      <DependentUpon>stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\moduleSelect.resx">
+      <DependentUpon>moduleSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\facultyProfile.resx">
+      <DependentUpon>facultyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance.resx">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\teacher.resx">
+      <DependentUpon>teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\administrator.resx">
+      <DependentUpon>administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\accounts.resx">
+      <DependentUpon>accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\labController.resx">
+      <DependentUpon>labController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\librarian.resx">
+      <DependentUpon>librarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\stuff.resx">
+      <DependentUpon>stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hydrangeas.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

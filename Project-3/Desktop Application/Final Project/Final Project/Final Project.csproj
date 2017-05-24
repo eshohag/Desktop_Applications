@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{214864E6-5D33-426E-8585-354B002B9362}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Final_Project</RootNamespace>
+    <AssemblyName>Final Project</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CabinInfoManager.cs" />
+    <Compile Include="BLL\ClinicalManager.cs" />
+    <Compile Include="BLL\DiagnosesManager.cs" />
+    <Compile Include="BLL\DoctorsManager.cs" />
+    <Compile Include="BLL\DoctorsSchedulManager.cs" />
+    <Compile Include="BLL\DrugManager.cs" />
+    <Compile Include="BLL\InstrumentManager.cs" />
+    <Compile Include="BLL\LoginInfoManager.cs" />
+    <Compile Include="BLL\NurseManager.cs" />
+    <Compile Include="BLL\NurseScheduleManager.cs" />
+    <Compile Include="BLL\PatientManager.cs" />
+    <Compile Include="BLL\PaymentManager.cs" />
+    <Compile Include="BLL\TreatmentManager.cs" />
+    <Compile Include="DAL\Gateway\CabinInfoGateway.cs" />
+    <Compile Include="DAL\Gateway\ClinicalGateway.cs" />
+    <Compile Include="DAL\Gateway\CommonGateway.cs" />
+    <Compile Include="DAL\Gateway\DiagnosesGateway.cs" />
+    <Compile Include="DAL\Gateway\DoctorsGateway.cs" />
+    <Compile Include="DAL\Gateway\DoctorsScheduleGateway.cs" />
+    <Compile Include="DAL\Gateway\DrugGateway.cs" />
+    <Compile Include="DAL\Gateway\InstrumentGateway.cs" />
+    <Compile Include="DAL\Gateway\LoginInfoGateway.cs" />
+    <Compile Include="DAL\Gateway\NurseGateway.cs" />
+    <Compile Include="DAL\Gateway\NurseScheduleGateway.cs" />
+    <Compile Include="DAL\Gateway\PatientGateway.cs" />
+    <Compile Include="DAL\Gateway\PaymentGateway.cs" />
+    <Compile Include="DAL\Gateway\TreatmentGateway.cs" />
+    <Compile Include="DAL\Model\CabinInfo.cs" />
+    <Compile Include="DAL\Model\Clinical.cs" />
+    <Compile Include="DAL\Model\Diagnoses.cs" />
+    <Compile Include="DAL\Model\Doctors.cs" />
+    <Compile Include="DAL\Model\DoctorsSchedule.cs" />
+    <Compile Include="DAL\Model\Drug.cs" />
+    <Compile Include="DAL\Model\Instrument.cs" />
+    <Compile Include="DAL\Model\loginInfo.cs" />
+    <Compile Include="DAL\Model\Nurse.cs" />
+    <Compile Include="DAL\Model\NurseSchedule.cs" />
+    <Compile Include="DAL\Model\Patient.cs" />
+    <Compile Include="DAL\Model\Payment.cs" />
+    <Compile Include="DAL\Model\Treatment.cs" />
+    <Compile Include="DiagnosesCenterDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagnosesCenterDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nurseScheduleUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nurseScheduleUser.Designer.cs">
+      <DependentUpon>nurseScheduleUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\cabinInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\cabinInfo.Designer.cs">
+      <DependentUpon>cabinInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\drugInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\drugInfo.Designer.cs">
+      <DependentUpon>drugInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\doctorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\doctorInfo.Designer.cs">
+      <DependentUpon>doctorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\clinicalCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\clinicalCost.Designer.cs">
+      <DependentUpon>clinicalCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\diagnosesCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\diagnosesCost.Designer.cs">
+      <DependentUpon>diagnosesCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\doctorSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\doctorSchedule.Designer.cs">
+      <DependentUpon>doctorSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\doctorInfo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\doctorInfo2.Designer.cs">
+      <DependentUpon>doctorInfo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\doctorSchedule2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\doctorSchedule2.Designer.cs">
+      <DependentUpon>doctorSchedule2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\payment2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\payment2.Designer.cs">
+      <DependentUpon>payment2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\patientInfo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\patientInfo2.Designer.cs">
+      <DependentUpon>patientInfo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\nurseSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\nurseSchedule.Designer.cs">
+      <DependentUpon>nurseSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\instrumentalCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\instrumentalCost.Designer.cs">
+      <DependentUpon>instrumentalCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\nurseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\nurseInfo.Designer.cs">
+      <DependentUpon>nurseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\treatmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\treatmentInfo.Designer.cs">
+      <DependentUpon>treatmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\patientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\patientInfo.Designer.cs">
+      <DependentUpon>patientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="nurseScheduleUser.resx">
+      <DependentUpon>nurseScheduleUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\cabinInfo.resx">
+      <DependentUpon>cabinInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\drugInfo.resx">
+      <DependentUpon>drugInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\doctorInfo.resx">
+      <DependentUpon>doctorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\clinicalCost.resx">
+      <DependentUpon>clinicalCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\diagnosesCost.resx">
+      <DependentUpon>diagnosesCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\doctorSchedule.resx">
+      <DependentUpon>doctorSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\doctorInfo2.resx">
+      <DependentUpon>doctorInfo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\doctorSchedule2.resx">
+      <DependentUpon>doctorSchedule2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\payment2.resx">
+      <DependentUpon>payment2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\patientInfo2.resx">
+      <DependentUpon>patientInfo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\nurseSchedule.resx">
+      <DependentUpon>nurseSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\instrumentalCost.resx">
+      <DependentUpon>instrumentalCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\nurseInfo.resx">
+      <DependentUpon>nurseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\treatmentInfo.resx">
+      <DependentUpon>treatmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\patientInfo.resx">
+      <DependentUpon>patientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DiagnosesCenterDBDataSet.xsc">
+      <DependentUpon>DiagnosesCenterDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosesCenterDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiagnosesCenterDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiagnosesCenterDBDataSet.xss">
+      <DependentUpon>DiagnosesCenterDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
